@@ -16,12 +16,13 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## return the mean of a "makeCacheMatrix"
+## return the inverse of a "makeCacheMatrix"
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         inv <- x$getinv
         if(!is.null(inv)){
+                ## return inverse if already cached
                 message("getting cached data")
                 return(inv)
         }
